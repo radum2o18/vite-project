@@ -7,8 +7,9 @@
         <h3><b>Last name:</b> {{ user.lastName }}</h3>
         <h4><b>Age:</b> {{ user.age }}</h4>
         <h5><b>User id:</b>{{ user.id }}</h5>
+
+        <button @click="remove(index)">Delete user</button>
       </li>
-      <button @click="remove">Delete user</button>
     </ul>
   </section>
 </template>

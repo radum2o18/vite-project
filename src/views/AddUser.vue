@@ -1,6 +1,6 @@
 <template>
   <h2>Add a user</h2>
-  <section>
+  <base-card>
     <form @submit.prevent="submitForm">
       <div>
         <label for="firstName">First Name</label>
@@ -14,9 +14,9 @@
         <label for="age">Age</label>
         <input type="number" id="age" v-model.number="ageInput" />
       </div>
-      <button>Add User</button>
+      <base-button>Add User</base-button>
     </form>
-  </section>
+  </base-card>
 </template>
 
 <script lang="ts" setup>
@@ -43,17 +43,6 @@ function submitForm() {
 </script>
 
 <style lang="postcss" scoped>
-section {
-  @apply max-w-2xl
-    p-4
-    rounded-md
-    shadow-md
-    m-auto
-    mt-16
-    flex
-    justify-center;
-}
-
 h2 {
   @apply flex
   justify-center
@@ -74,15 +63,5 @@ label {
 input {
   @apply mb-2
   border;
-}
-
-button {
-  @apply bg-red-400
-  border-solid
-  border
-  border-red-400
-  cursor-pointer
-  text-white
-  p-2;
 }
 </style>

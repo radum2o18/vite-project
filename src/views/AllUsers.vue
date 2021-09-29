@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <base-card>
     <p v-if="loadedUsers.length == 0">No users found!</p>
     <ul v-else>
       <li v-for="(user, index) in loadedUsers" :key="user.id">
@@ -8,10 +8,10 @@
         <h4><b>Age:</b> {{ user.age }}</h4>
         <h5><b>User id:</b>{{ user.id }}</h5>
 
-        <button @click="remove(index)">Delete user</button>
+        <base-button @click="remove(index)">Delete user</base-button>
       </li>
     </ul>
-  </section>
+  </base-card>
 </template>
 
 <script lang="ts" setup>
@@ -27,27 +27,6 @@ function remove(index: number) {
 </script>
 
 <style lang="postcss" scoped>
-button {
-  @apply bg-red-400
-  border-solid
-  border
-  border-red-400
-  cursor-pointer
-  text-white
-  p-2;
-}
-
-section {
-  @apply max-w-2xl
-    p-4
-    rounded-md
-    shadow-md
-    m-auto
-    mt-16
-    flex
-    justify-center;
-}
-
 p {
   @apply font-bold;
 }

@@ -21,7 +21,7 @@ function addUser(data: User) {
   users.value.push(newUser);
 }
 
-function removeUser(index: number) {
+function removeUser(index: any) {
   users.value.splice(index, 1);
 }
 

@@ -1,67 +1,23 @@
 <template>
   <h2>Add a user</h2>
   <base-card>
-    <form @submit.prevent="submitForm">
-      <div>
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" v-model="firstNameInput" />
-      </div>
-      <div>
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" v-model="lastNameInput" />
-      </div>
-      <div>
-        <label for="age">Age</label>
-        <input type="number" id="age" v-model.number="ageInput" />
-      </div>
-      <base-button>Add User</base-button>
-    </form>
+    <add-form></add-form>
   </base-card>
 </template>
 
 <script lang="ts" setup>
-import { inject, ref } from 'vue';
-import { useRouter } from 'vue-router';
-import User from '../types/User';
+import AddForm from '../components/AddForm.vue';
 
-const addUser: any = inject('addUser');
-const router = useRouter();
-
-const firstNameInput = ref('');
-const lastNameInput = ref('');
-const ageInput = ref(0);
-
-function submitForm() {
-  addUser({
-    id: Date.now(),
-    firstName: firstNameInput,
-    lastName: lastNameInput,
-    age: ageInput,
-  });
-  router.push('/users');
+components: {
+  AddForm;
 }
 </script>
 
-<style lang="postcss" scoped>
+<style scoped lang="postcss">
 h2 {
   @apply flex
   justify-center
   font-bold
   mt-16;
-}
-
-input,
-label {
-  @apply flex
-  w-full;
-}
-
-label {
-  @apply font-bold;
-}
-
-input {
-  @apply mb-2
-  border;
 }
 </style>

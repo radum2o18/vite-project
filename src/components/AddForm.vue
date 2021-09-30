@@ -30,7 +30,7 @@ const ageInput = ref(0);
 
 function submitForm() {
   addUser({
-    id: Date.now(),
+    id: Date.now().toString(),
     firstName: firstNameInput,
     lastName: lastNameInput,
     age: ageInput,

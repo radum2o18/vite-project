@@ -26,7 +26,7 @@ const router = useRouter();
 
 const firstNameInput = ref('');
 const lastNameInput = ref('');
-const ageInput = ref(0);
+const ageInput = ref(18);
 
 function submitForm() {
   addUser({
@@ -51,7 +51,7 @@ label {
 }
 
 input {
-  @apply mb-2
-  border;
+  @apply border-b
+  focus:outline-none;
 }
 </style>

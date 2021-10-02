@@ -1,5 +1,8 @@
 <template>
   <base-card>
+    <base-search></base-search>
+  </base-card>
+  <base-card>
     <p v-if="loadedUsers.length == 0">No users found!</p>
     <ul v-else>
       <user-item

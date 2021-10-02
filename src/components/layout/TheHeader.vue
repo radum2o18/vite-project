@@ -17,8 +17,7 @@
 header {
   @apply w-full
     bg-gray-700
-    h-20
-    shadow-md;
+    h-10;
 }
 
 nav {
@@ -30,7 +29,7 @@ ul {
     p-0
     h-full
     flex
-    justify-end
+    justify-center
     items-center;
 }
 

@@ -2,21 +2,21 @@
   <base-card>
     <base-search></base-search>
   </base-card>
-  <base-card>
-    <p v-if="loadedUsers.length == 0">No users found!</p>
-    <ul v-else>
-      <user-item
-        v-for="(user, index) in loadedUsers"
-        :key="user.id"
-        :first-name="user.firstName"
-        :last-name="user.lastName"
-        :age="user.age"
-        :user-id="user.id"
-        :index="index"
-      >
-      </user-item>
-    </ul>
+  <base-card v-if="loadedUsers.length == 0">
+    <p>No users found!</p>
   </base-card>
+  <ul v-else>
+    <user-item
+      v-for="(user, index) in loadedUsers"
+      :key="user.id"
+      :first-name="user.firstName"
+      :last-name="user.lastName"
+      :age="user.age"
+      :user-id="user.id"
+      :index="index"
+    >
+    </user-item>
+  </ul>
 </template>
 
 <script lang="ts" setup>

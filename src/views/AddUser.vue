@@ -1,5 +1,7 @@
 <template>
-  <h2>Add a user</h2>
+  <base-card>
+    <h2>Add a user</h2>
+  </base-card>
   <base-card>
     <add-form></add-form>
   </base-card>

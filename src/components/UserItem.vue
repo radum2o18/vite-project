@@ -1,11 +1,13 @@
 <template>
-  <li>
-    <h3><b>First name:</b> {{ firstName }}</h3>
-    <h3><b>Last name:</b> {{ lastName }}</h3>
-    <h4><b>Age:</b> {{ age }}</h4>
-    <h5><b>User id:</b>{{ userId }}</h5>
-    <base-button @click="remove(index)">Delete user</base-button>
-  </li>
+  <base-card>
+    <li>
+      <h3><b>First name:</b> {{ firstName }}</h3>
+      <h3><b>Last name:</b> {{ lastName }}</h3>
+      <h4><b>Age:</b> {{ age }}</h4>
+      <h5><b>User id:</b>{{ userId }}</h5>
+      <base-button @click="remove(index)">Delete user</base-button>
+    </li>
+  </base-card>
 </template>
 
 <script setup lang="ts">

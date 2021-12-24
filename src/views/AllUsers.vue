@@ -25,6 +25,7 @@ import { inject } from 'vue';
 import User from '../types/User';
 
 let loadedUsers = inject('users') as User[];
+console.log(typeof loadedUsers);
 </script>
 
 <style lang="postcss" scoped>
